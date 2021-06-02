@@ -1,17 +1,16 @@
-const client = require('./client.js')
+const connect = require("./client");
+const setupInput = require("./input");
 const conn = client();
-conn.write('Move: up');
 
-setTimeout(function() {
-  conn.write('Move: left')}, 
-  1000)
+console.log("Connecting ...");
+connect();
+setupInput();
 
-setTimeout(function() {
-  conn.write('Move: left')}, 
-  1500)
-  
-setTimeout(function() {
-  conn.write('Move: left')}, 
-  2000)
-  
-// client.on()
+
+
+// conn.write('Move: up');
+
+// setTimeout(function() {
+//   conn.write('Move: left')}, 
+//   1000)
+
