@@ -12,13 +12,14 @@ const connect = function () {
   conn.setEncoding("utf8");
   conn.on("connect", () => {
     // code that does something when the connection is first established
-    console.log('connect to Server')
+    console.log('Successully connected to game server')
+    conn.write('Hello');
   });
+
   return conn;
-};
-
-
-console.log("Connecting ...");
-connect();
+};  
 
 module.exports = connect;
+
+// console.log("Connecting ...");
+connect();
